@@ -1,0 +1,14 @@
+# Environment files
+.env
+.env.local
+
+# Dependencies
+node_modules
+/jspm_packages/
+# Directories for bundling/building
+/dist/
+/build/
+/coverage/
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
