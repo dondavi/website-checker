@@ -38,7 +38,7 @@ functions:
       - schedule:
           rate: rate(3 hours)
           enabled: true
-          description: 'Check websites every 5 minutes'
+          description: 'Check websites every 3 hours'
 
 package:
   patterns:
