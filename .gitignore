@@ -12,3 +12,7 @@ node_modules
 
 #Ignore vscode AI rules
 .github/instructions/codacy.instructions.md
+
+# Serverless Framework
+.serverless/
+.serverless_plugins/

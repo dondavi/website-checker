@@ -1,0 +1,55 @@
+service: website-checker
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: ${opt:region, 'us-east-1'}
+  stage: ${opt:stage, 'dev'}
+  memorySize: 256
+  timeout: 30
+
+  environment:
+    ALERT_EMAIL_FROM: ${env:ALERT_EMAIL_FROM}
+    ALERT_EMAIL_TO: ${env:ALERT_EMAIL_TO}
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - ses:SendEmail
+            - ses:SendRawEmail
+          Resource: '*'
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource:
+            - 'arn:aws:logs:${aws:region}:${aws:accountId}:log-group:/aws/lambda/${self:service}-${self:provider.stage}-*:*'
+
+functions:
+  websiteChecker:
+    handler: src/handlers/websiteChecker.handler
+    description: Checks websites for availability and sends alerts
+    events:
+      - schedule:
+          rate: rate(5 minutes)
+          enabled: true
+          description: 'Check websites every 5 minutes'
+
+package:
+  patterns:
+    - '!.git/**'
+    - '!.github/**'
+    - '!tests/**'
+    - '!node_modules/**'
+    - '!coverage/**'
+    - '!*.md'
+    - 'src/**'
+    - 'websites.json'
+
+plugins:
+  # - serverless-offline

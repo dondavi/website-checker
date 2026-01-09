@@ -41,6 +41,7 @@ This document provides essential context for the AI agent (Claude) to understand
 *   **Tool Usage:**
     *   Use `npm install` for dependency management.
     *   Use `npm test` to run all tests.
+    *   Use `serverless deploy` to deploy to AWS
 
 ## 5. Specific Instructions for Claude
 

@@ -1,0 +1,28 @@
+{
+  "name": "website-checker",
+  "version": "1.0.0",
+  "description": "Lambda function to check website availability and send alerts via AWS SES",
+  "main": "src/handlers/websiteChecker.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/**/*.test.js",
+    "deploy": "serverless deploy"
+  },
+  "keywords": [
+    "lambda",
+    "website-monitoring",
+    "aws",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.693.0"
+  },
+  "devDependencies": {
+    "serverless": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=23.0.0"
+  }
+}
