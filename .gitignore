@@ -1,7 +1,7 @@
 # Environment files
 .env
 .env.local
-website.local.json
+websites.local.json
 
 # Dependencies
 node_modules

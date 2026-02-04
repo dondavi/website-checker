@@ -21,7 +21,7 @@ Thumbs.db
 # Environment
 .env
 .env.local
-website.local.json
+websites.local.json
 
 # Serverless
 .serverless/
