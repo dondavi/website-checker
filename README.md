@@ -26,6 +26,31 @@ An AWS Lambda function that monitors website availability by checking for 200 HT
 npm install
 ```
 
+## Development Environment Setup
+
+For development with AWS Bedrock, you can use the initialization script to set up your environment variables:
+
+```bash
+source ./initdev.sh
+```
+
+This script will:
+- Load environment variables from `.env` file
+- Set up AWS Bedrock configuration
+- Export variables to your current shell session
+
+If the `.env` file doesn't exist, the script will create a template for you. Edit it with your actual values:
+
+```bash
+# AWS Bedrock Configuration
+ANTHROPIC_MODEL=us.anthropic.claude-sonnet-4-5-20250929-v1:0
+ANTHROPIC_SMALL_FAST_MODEL=us.anthropic.claude-3-5-haiku-20241022-v1:0
+AWS_BEARER_TOKEN_BEDROCK=your-token-here
+AWS_REGION=us-east-1
+```
+
+**Note:** The script must be sourced (not executed) to set variables in the parent shell.
+
 ## Configuration
 
 ### 1. Configure Websites
@@ -112,8 +137,9 @@ website-checker/
 │   ├── httpChecker.test.js
 │   ├── sesUtils.test.js
 │   └── websiteChecker.test.js
-├── .env                         # Email configuration (create from .env.example)
-├── .env.example                 # Email configuration template
+├── .env                         # Email & AWS configuration (create from template)
+├── .env.example                 # Configuration template
+├── initdev.sh                   # Development environment setup script
 ├── websites.json                # Website configuration
 ├── package.json
 ├── serverless.yml               # Infrastructure configuration

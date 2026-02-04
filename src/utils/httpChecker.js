@@ -17,7 +17,7 @@ export const checkWebsite = (url) => {
         port: urlObj.port,
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
-        timeout: 10000,
+        timeout: 12000,
         headers: {
           'User-Agent': 'Website-Checker-Lambda/1.0'
         }
