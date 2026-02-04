@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+package-lock.json
 
 # Build output
 dist/
@@ -20,6 +21,7 @@ Thumbs.db
 # Environment
 .env
 .env.local
+website.local.json
 
 # Serverless
 .serverless/

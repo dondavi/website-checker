@@ -6,6 +6,7 @@ website.local.json
 # Dependencies
 node_modules
 /jspm_packages/
+package-lock.json
 # Directories for bundling/building
 /dist/
 /build/

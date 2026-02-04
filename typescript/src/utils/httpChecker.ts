@@ -2,7 +2,7 @@ import https from 'https';
 import http, { IncomingMessage } from 'http';
 import type { Website, RawCheckResult, WebsiteCheckResult } from '../types/index.js';
 
-const REQUEST_TIMEOUT = 12000;
+const REQUEST_TIMEOUT = 13000;
 const USER_AGENT = 'Website-Checker-Lambda/1.0';
 
 /**
