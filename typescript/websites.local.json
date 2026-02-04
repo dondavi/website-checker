@@ -1,0 +1,28 @@
+{
+  "websites": [
+    {
+      "name": "ddvi web",
+      "url": "https://www.ddvi.io"
+    },
+    {
+      "name": "ddvi portal",
+      "url": "https://portal.ddvi.io"
+    },
+    {
+      "name": "social society",
+      "url": "https://www.socialsocietypartyrental.com"
+    },
+    {
+      "name": "islandbreeze",
+      "url": "https://www.islandbreezerentals.com"
+    },
+    {
+      "name": "island-breeze static",
+      "url": "http://www.islandbreeze-rentals.com/"
+    },
+    {
+      "name": "SSPR Machine Order",
+      "url": "https://www.socialsocietypartyrental.com/product/frozendrinkmachine/"
+    }
+  ]
+}
