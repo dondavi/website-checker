@@ -52,3 +52,4 @@ package:
     - '!*.ts'
     - 'dist/**'
     - 'websites.json'
+    - '!websites.local.json'

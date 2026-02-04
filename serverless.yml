@@ -50,6 +50,7 @@ package:
     - '!*.md'
     - 'src/**'
     - 'websites.json'
+    - '!websites.local.json'
 
 plugins:
   # - serverless-offline
