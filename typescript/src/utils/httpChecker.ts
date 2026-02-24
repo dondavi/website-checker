@@ -33,7 +33,7 @@ export const checkWebsite = (url: string): Promise<RawCheckResult> => {
 
         res.on('end', () => {
           const statusCode = res.statusCode ?? 0;
-          const isSuccess = statusCode === 200;
+          const isSuccess = statusCode === 200 || res.statusCode === 204 || res.statusCode === 304;;
           resolve({
             success: isSuccess,
             statusCode,

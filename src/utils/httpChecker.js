@@ -28,7 +28,7 @@ export const checkWebsite = (url) => {
         res.on('data', () => {});
 
         res.on('end', () => {
-          const isSuccess = res.statusCode === 200;
+          const isSuccess = res.statusCode === 200 || res.statusCode === 204 || res.statusCode === 304 ;
           resolve({
             success: isSuccess,
             statusCode: res.statusCode,
